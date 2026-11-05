@@ -1,0 +1,36 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Task | TaskFlow</title>
+
+    <link rel="stylesheet" href="{% static 'todo/style.css' %}" />
+  </head>
+
+  <body>
+    <div class="edit-container">
+      <h2>Edit Task</h2>
+
+      <form method="POST" class="edit-form">
+        {% csrf_token %}
+
+        <label>Task Title</label>
+
+        <input type="text" name="title" value="{{ task.title }}" required />
+
+        <label>Description</label>
+
+        <textarea name="description">{{ task.description }}</textarea>
+
+        <button type="submit">Save Changes</button>
+      </form>
+
+      <a href="{% url 'dashboard' %}" class="back-link">
+        <i class="fa fa-arrow-left"></i> Back to Dashboard
+      </a>
+    </div>
+  </body>
+</html>
