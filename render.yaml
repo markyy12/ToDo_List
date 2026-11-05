@@ -2,7 +2,7 @@ services:
   - type: web
     name: django-todo-app
     env: python
-    plan: free   # <--- Add this line right here!
+    plan: free
     buildCommand: "./build.sh"
     startCommand: "gunicorn config.wsgi:application"
     envVars:
