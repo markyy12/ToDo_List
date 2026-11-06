@@ -1,14 +1,11 @@
+databases:
+  - name: todo-app-db
+    databaseName: todo_app
+    user: todo_app
+    plan: free
+
 services:
   - type: web
-    name: django-todo-app
-    env: python
+    name: todo-app
+    runtime: python
     plan: free
-    buildCommand: "./build.sh"
-    startCommand: "gunicorn todo_app.wsgi:application"
-    envVars:
-      - key: PYTHON_VERSION
-        value: 3.10.0
-      - key: SECRET_KEY
-        generateValue: true
-      - key: DEBUG
-        value: false

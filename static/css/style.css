@@ -440,3 +440,106 @@ footer {
     width: 100%;
   }
 }
+
+
+/* ==============================
+   EDIT TASK PAGE
+   ============================== */
+
+.edit-container {
+  width: 92%;
+  max-width: 620px;
+  margin: 70px auto;
+  padding: 35px;
+  background: #ffffff;
+  border: 1px solid #edf0f3;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+.edit-container h2 {
+  color: #176b50;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #edf0f3;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.edit-form label {
+  color: #263238;
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.edit-form input,
+.edit-form textarea {
+  width: 100%;
+  background: #fbfcfd;
+  color: #263238;
+}
+
+.edit-form textarea {
+  min-height: 150px;
+  line-height: 1.6;
+}
+
+.edit-form button {
+  align-self: flex-start;
+  margin-top: 12px;
+  padding: 13px 25px;
+  background: #176b50;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(23, 107, 80, 0.16);
+}
+
+.edit-form button:hover {
+  background: #10533e;
+  transform: translateY(-2px);
+  box-shadow: 0 7px 15px rgba(23, 107, 80, 0.2);
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 25px;
+  color: #176b50;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.back-link:hover {
+  color: #10533e;
+  transform: translateX(-3px);
+}
+
+.back-link i {
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  .edit-container {
+    width: 94%;
+    margin: 30px auto;
+    padding: 24px 20px;
+  }
+
+  .edit-container h2 {
+    font-size: 24px;
+  }
+
+  .edit-form button {
+    width: 100%;
+  }
+}
